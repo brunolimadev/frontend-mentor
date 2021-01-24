@@ -24,6 +24,7 @@ h1, h2, h3, h4, h5, h6, p, span, small, a{
 }
 
 ul{
+    padding-left: 18px;
     list-style: url('../images/icon-check.svg');
 }
 
@@ -45,8 +46,9 @@ body{
 }
 
 .container{
-    max-width: 540px;
+    max-width: 940px;
     width: 100%;
+    height: 100vh;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -65,8 +67,10 @@ body{
     height: 145px;
     background-image: url('../images/pattern-circles.svg');
     z-index: -1;
-    top: -30px;
-    left: calc((146px / 2) + (270px / 2));
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 
 .top > h1{
@@ -79,32 +83,95 @@ body{
 }
 
 main{
+    max-width: 540px;
     width: 100%;
     height: 400px;
+    margin: 0 auto;
     background-color: #fff;
     border-radius: 8px;
-    padding: 46px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 4px 8px 20px #eee;
 }
 .main__top,
 .main__content,
 .main__footer{
     display: flex;
+    padding: 46px;
 }
 
 .main__top{
     justify-content: space-between;
+    align-items: center;
+}
+
+.main__top > p{
+    font-weight: 800;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+}
+
+.main__top > p:first-child{
+    letter-spacing: 2px;
+}
+
+
+.main__top > p:last-child{
+    font-weight: 600;
+}
+
+
+.main__top .value{
+    font-weight: 800;
+    font-size: 32px;
+    color: var(--text-and-cta-bg);
+    margin-right: 8px;
 }
 
 .main__content{
     justify-content: center;
+    border-bottom: 1px solid #f1f5fe;
+}
+
+.main__content small{
+    color: var(--text);
+}
+
+.main__content-discount{
+    background-color: var(--discount-bg);
+    color: var(--discount-text);
+    padding: 2px 4px;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 800;
 }
 
 .main__footer{
     justify-content: space-between;
     align-items: center;
+}
+
+button{
+    width:  170px;
+    height: 50px;
+    background-color: var(--text-and-cta-bg);
+    color: var(--cta-text);
+    border-radius: 170px;
+    cursor: pointer;
+}
+
+button:hover{
+    color: #fff;
+}
+
+.attribution{
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    text-align: center;
 }
 
 
