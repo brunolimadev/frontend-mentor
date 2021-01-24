@@ -1,0 +1,119 @@
+:root{
+ --full-slider-bar: hsl(174, 77%, 80%);
+ --slider-bg: hsl(174, 86%, 45%);
+ --discount-bg: hsl(14, 92%, 95%);
+ --discount-text: hsl(15, 100%, 70%);
+ --cta-text: hsl(226, 100%, 87%);
+ --main-bg: hsl(230, 100%, 99%);
+ --empty-slider-bar: hsl(224, 65%, 95%);
+ --toggle-bg: hsl(223, 50%, 87%);
+ --text: hsl(225, 20%, 60%);
+ --text-and-cta-bg: hsl(227, 35%, 25%);
+}
+
+*{
+    border:0;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, small, a{
+    -webkit-font-smoothing: antialiased;
+}
+
+ul{
+    list-style: url('../images/icon-check.svg');
+}
+
+body{
+    position: relative;
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    background-color: var(--main-bg);
+}
+
+.bg{
+    width: 100%;
+    height: 50vh;
+    background-color: #f1f5fe;
+    position: absolute;
+    z-index: -1;
+    border-radius: 0 0 0px 200px;
+    left: 0;
+}
+
+.container{
+    max-width: 540px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.top{
+    position: relative;
+    text-align: center;
+    margin: 100px 0;
+}
+
+.top::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 146px;
+    height: 145px;
+    background-image: url('../images/pattern-circles.svg');
+    z-index: -1;
+    top: -30px;
+    left: calc((146px / 2) + (270px / 2));
+}
+
+.top > h1{
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.top > p{
+    color: var(--text);
+}
+
+main{
+    width: 100%;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 46px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.main__top,
+.main__content,
+.main__footer{
+    display: flex;
+}
+
+.main__top{
+    justify-content: space-between;
+}
+
+.main__content{
+    justify-content: center;
+}
+
+.main__footer{
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Mobile */
+@media screen and (max-width: 375px){
+
+}
+
+/* Desktop */
+@media screen and (max-width: 1440px){
+
+}

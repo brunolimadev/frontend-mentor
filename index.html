@@ -7,29 +7,53 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Interactive pricing component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="container">
+    <div class="bg"></div>
+    <header>
+      <div class="top">
+        <h1>Simple, traffic-based pricing</h1>
+        <p>Sign-up for our 30-day trial. No credit card required.</p> 
+      </div>
+    </header>
+    <main>
+      <div class="main__top">
+        <p>Pageviews</p>
+        <p><span class="value">$</span>/month</p>
+      </div>
+    <div class="main__content">
+      <small>
+        Monthly Billing
+      </small> 
+      <small>
+        Yearly Billing 
+        <span>25% discount</span>
+      </small>
+    </div>
+      <hr>
+      <div class="main__footer">
+        <ul>
+          <li>
+            <small>Unlimited websites</small>
+          </li>
+          <li>
+            <small>100% data ownership</small>
+          </li>
+          <li>
+            <small>Email reports</small>
+          </li>
+        </ul>
+        <button>Start my trial</button>
+      </div>
+    </main>
+  </div>
+  
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
-
-  Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
+  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
