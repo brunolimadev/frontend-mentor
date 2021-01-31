@@ -6,6 +6,8 @@
 
     let pageviewsValue = document.getElementById('value');
 
+    let wrapperInputRange = document.getElementById('wrapper-range');
+
     const pageviewSettings = [
         {
             views: '10K',
@@ -41,6 +43,16 @@
 
     pageviewsValue.innerHTML = `$${pageviewSettings[slider.value].value.toFixed(2)}`;
 
+
+    // window.addEventListener('resize', () => {
+    //     if(window.visualViewport.width <= 375){
+    //         pageviews.insertAdjacentElement('afterend', wrapperInputRange);
+    //     }else{
+    //         document.querySelector('.main__content').insertBefore(wrapperInputRange, 1);
+    //     }
+    // })
+    
+    
     slider.addEventListener("mousemove", () => {
         var x = slider.value;
         var color = `linear-gradient(90deg, hsl(174, 77%, 80%) ${getPercentColor(x)}%, hsl(224, 65%, 95%) ${getPercentColor(x)}%)`;
@@ -57,5 +69,7 @@
         let y = (value * 100) / x;
         return y;
     }
+
+
    
 })();

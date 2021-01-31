@@ -11,56 +11,93 @@
   <title>Frontend Mentor | Interactive pricing component</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <div class="container">
+
     <div class="bg"></div>
-    <header>
-      <div class="top">
-        <h1>Simple, traffic-based pricing</h1>
-        <p>Sign-up for our 30-day trial. No credit card required.</p>
-      </div>
-    </header>
-    <main>
-      <div class="main__top">
-        <p id="pageviews"></p>
-        <p><span id="value"></span>/ month</p>
-      </div>
-      <div class="main__content">
-        
-        <div class="main__content-range">
-          <input type="range" class="form-range" id="range">
+
+      <div class="row m-0 pt-4">
+        <div class="col m-0 text-center my-5 top">
+          <h1>Simple, traffic-based pricing</h1>
+          <p>Sign-up for our 30-day trial. No credit card required.</p>
         </div>
-        <small>
-          Monthly Billing
-        </small>
-        <small>
-          Yearly Billing
-          <span class="main__content-discount">25% discount</span>
-        </small>
       </div>
-      <div class="main__footer">
-        <ul>
-          <li>
-            <small>Unlimited websites</small>
-          </li>
-          <li>
-            <small>100% data ownership</small>
-          </li>
-          <li>
-            <small>Email reports</small>
-          </li>
-        </ul>
-        <button>Start my trial</button>
+
+    <main>
+      <div class="row m-0 main__top">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6 m-0 d-flex align-items-center justify-content-center">
+          <p id="pageviews"></p>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6 m-0 d-flex align-items-center justify-content-center">
+          <p id="box-value"><span id="value"></span>/ month</p>
+        </div>
+      </div>
+
+      <div class="row m-0">
+        <div class="col p-0">
+          <div class="row m-0 w-100">
+            <div class="col m-0 p-0 pt-2">
+              <div class="main__content-range" id="wrapper-range">
+                <input type="range" class="form-range" id="range">
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-2">
+            <div class="col p-0">
+              <div class="main__options pt-4">
+                <small>
+                  Monthly Billing
+                </small>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+                <small>
+                  Yearly Billing
+                  <span class="main__content-discount">25% discount</span>
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <div class="row m-0">
+        <div class="col-sm-12 col-md-6 col-lg-6 p-0 d-flex justify-content-center">
+          <ul>
+            <li>
+              <small>Unlimited websites</small>
+            </li>
+            <li>
+              <small>100% data ownership</small>
+            </li>
+            <li>
+              <small>Email reports</small>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6  d-flex justify-content-center align-items-center">
+          <button>Start my trial</button>
+        </div>
       </div>
     </main>
+
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="https://github.com/brunolimadev/interactive-pricing-component-main">Bruno Lima</a>.
     </div>
+
   </div>
 </body>
 <script src="js/index.js"></script>
+
 </html>
