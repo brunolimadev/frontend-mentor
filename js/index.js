@@ -6,7 +6,11 @@
 
     let pageviewsValue = document.getElementById('value');
 
+    let wrapperInputRangeParent = document.getElementById('wrapper-range').parentNode;
     let wrapperInputRange = document.getElementById('wrapper-range');
+
+    let boxValueParent = document.getElementById('box-value').parentElement;
+    let boxValue = document.getElementById('box-value');
 
     const pageviewSettings = [
         {
@@ -43,14 +47,12 @@
 
     pageviewsValue.innerHTML = `$${pageviewSettings[slider.value].value.toFixed(2)}`;
 
+    getScreenSizeAndAdjustInputRangePosition();
 
-    // window.addEventListener('resize', () => {
-    //     if(window.visualViewport.width <= 375){
-    //         pageviews.insertAdjacentElement('afterend', wrapperInputRange);
-    //     }else{
-    //         document.querySelector('.main__content').insertBefore(wrapperInputRange, 1);
-    //     }
-    // })
+
+    window.addEventListener('resize', () => {
+        getScreenSizeAndAdjustInputRangePosition();
+    })
     
     
     slider.addEventListener("mousemove", () => {
@@ -70,6 +72,16 @@
         return y;
     }
 
+    function getScreenSizeAndAdjustInputRangePosition(){
+        if(window.visualViewport.width <= 376){
+            boxValueParent.appendChild(wrapperInputRange);
+            wrapperInputRangeParent.appendChild(boxValue);
+            boxValueParent.classList.add('my-3')
+        }else{
+            boxValueParent.appendChild(boxValue);
+            wrapperInputRangeParent.appendChild(wrapperInputRange);
+            boxValueParent.classList.remove('my-3')
+        }
+    }
 
-   
 })();
