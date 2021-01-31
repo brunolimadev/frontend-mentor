@@ -35,18 +35,8 @@
         },
     ]
 
-    slider.min = 0;
-
-    slider.max = pageviewSettings.length - 1;
-
-    slider.step = 1;
-
-    slider.value = Math.round((pageviewSettings.length - 1) / 2);
-
-    pageviews.innerHTML = `${pageviewSettings[slider.value].views} PAGEVIEWS`;
-
-    pageviewsValue.innerHTML = `$${pageviewSettings[slider.value].value.toFixed(2)}`;
-
+    sliderSettings(0, pageviewSettings.length, 1);
+    changePageViewsAndValuePerMonth();
     getScreenSizeAndAdjustInputRangePosition();
 
 
@@ -65,6 +55,18 @@
         pageviews.innerHTML = `${pageviewSettings[slider.value].views} PAGEVIEWS`;
         pageviewsValue.innerHTML = `$${pageviewSettings[slider.value].value.toFixed(2)}`;
     })
+
+    function sliderSettings(min = 0, max = 10, step){
+        slider.min = min;
+        slider.max = max - 1;
+        slider.step = step;
+        slider.value = Math.round((max - 1) / 2);
+    }
+
+    function changePageViewsAndValuePerMonth(){
+        pageviews.innerHTML = `${pageviewSettings[slider.value].views} PAGEVIEWS`;
+        pageviewsValue.innerHTML = `$${pageviewSettings[slider.value].value.toFixed(2)}`;
+    }
 
     function getPercentColor(value){
         let x = pageviewSettings.length - 1;
