@@ -43,18 +43,20 @@
     window.addEventListener('resize', () => {
         getScreenSizeAndAdjustInputRangePosition();
     })
-    
-    
-    slider.addEventListener("mousemove", () => {
-        var x = slider.value;
-        var color = `linear-gradient(90deg, hsl(174, 77%, 80%) ${getPercentColor(x)}%, hsl(224, 65%, 95%) ${getPercentColor(x)}%)`;
-        slider.style.background = color;
-    });
+
     
     slider.addEventListener("input", () => {
         pageviews.innerHTML = `${pageviewSettings[slider.value].views} PAGEVIEWS`;
         pageviewsValue.innerHTML = `$${pageviewSettings[slider.value].value.toFixed(2)}`;
+        fillInputRangeBar();
     })
+
+
+    function fillInputRangeBar(){
+        var x = slider.value;
+        var color = `linear-gradient(90deg, hsl(174, 77%, 80%) ${getPercentColor(x)}%, hsl(224, 65%, 95%) ${getPercentColor(x)}%)`;
+        slider.style.background = color;
+    }
 
     function sliderSettings(min = 0, max = 10, step){
         slider.min = min;
